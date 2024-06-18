@@ -1,5 +1,3 @@
-const gallery = document.querySelector(".gallery");
-
 const images = [
   {
     url: "https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?dpr=2&h=750&w=1260",
@@ -24,20 +22,5 @@ const images = [
   {
     url: "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",
     alt: "Lighthouse Coast Sea",
-  },
+  }
 ];
-
-function newGallery(arr) {
-  return arr
-    .map(
-      ({ url, alt }) =>
-        `<li>
-          <img src="${url}" alt="${alt}" width= '360px'>
-        </li>`
-    )
-    .join("");
-}
-gallery.style.listStyle = "none";
-gallery.insertAdjacentHTML("afterbegin", newGallery(images));
-
-console.log(gallery);
